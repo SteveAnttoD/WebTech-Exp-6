@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EduPortal - a friendly place to explore courses and campus news.">
+  <title>EduPortal | Learn and Grow</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navigation container" aria-label="Main navigation">
+      <a class="brand" href="#home">EduPortal</a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#announcements">Announcements</a>
+      </div>
+      <div class="clock" aria-label="Current time">
+        <span class="clock-label">Current time</span>
+        <time id="clock" aria-live="off">--:--:--</time>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="welcome container" id="home" aria-labelledby="welcome-title">
+      <div class="welcome-copy">
+        <p class="eyebrow">YOUR LEARNING JOURNEY STARTS HERE</p>
+        <h1 id="welcome-title">Learn something wonderful.</h1>
+        <p id="welcome-text">Explore new ideas, build useful skills, and make every day a chance to grow.</p>
+        <p id="welcome-message" class="welcome-message" role="status" hidden></p>
+        <a class="button button-light" href="#courses">Explore courses</a>
+      </div>
+      <div class="welcome-art" aria-hidden="true">📚</div>
+    </section>
+
+    <section class="container section" id="courses" aria-labelledby="courses-title">
+      <div class="section-heading">
+        <p class="eyebrow">FIND YOUR NEXT INTEREST</p>
+        <h2 id="courses-title">Featured courses</h2>
+        <p>Start with a subject you love. There is always more to discover.</p>
+      </div>
+      <div class="course-grid">
+        <article class="course-card">
+          <span class="course-icon" aria-hidden="true">💻</span>
+          <p class="course-category">TECHNOLOGY</p>
+          <h3>Web Design Basics</h3>
+          <p>Learn how HTML and CSS come together to create useful, welcoming websites.</p>
+          <a href="#announcements">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="course-card">
+          <span class="course-icon" aria-hidden="true">🔬</span>
+          <p class="course-category">SCIENCE</p>
+          <h3>Curious About Science</h3>
+          <p>Explore the questions, experiments, and discoveries that shape our world.</p>
+          <a href="#announcements">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="course-card">
+          <span class="course-icon" aria-hidden="true">🎨</span>
+          <p class="course-category">CREATIVITY</p>
+          <h3>Creative Thinking</h3>
+          <p>Try new ways to share ideas, solve problems, and bring your imagination to life.</p>
+          <a href="#announcements">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section announcements-section" id="announcements" aria-labelledby="announcements-title">
+      <div class="announcements-card">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT'S HAPPENING</p>
+          <h2 id="announcements-title">Announcements</h2>
+          <p>Keep up with the latest news from our learning community.</p>
+        </div>
+        <div class="button-row" aria-label="Announcement controls">
+          <button class="button" id="show-announcements" type="button">Show announcements</button>
+          <button class="button button-outline" id="hide-announcements" type="button">Hide announcements</button>
+        </div>
+        <div id="announcement-list" class="announcement-list" aria-live="polite">
+          <article class="announcement">
+            <span class="announcement-date">THIS WEEK</span>
+            <h3>Welcome to a new term!</h3>
+            <p>Explore the course list and find a new subject to enjoy this semester.</p>
+          </article>
+          <article class="announcement">
+            <span class="announcement-date">COMING SOON</span>
+            <h3>Student learning day</h3>
+            <p>Look out for more details about our upcoming day of learning and sharing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section activity-section" aria-labelledby="activity-title">
+      <div class="activity-card">
+        <div>
+          <p class="eyebrow">A LITTLE INTERACTIVE FUN</p>
+          <h2 id="activity-title">Ready, set, learn!</h2>
+          <p id="hover-text">Hover over this sentence to make it bigger.</p>
+          <div class="button-row">
+            <button class="button" id="background-button" type="button">Change page color</button>
+            <button class="button" id="start-animation" type="button">Start animation</button>
+            <button class="button button-outline" id="stop-animation" type="button">Stop</button>
+          </div>
+          <p id="animation-status" class="status-text" role="status">Animation is stopped.</p>
+        </div>
+        <div class="animation-track" id="animation-track" aria-label="Animation area">
+          <span class="moving-icon" id="moving-icon" aria-hidden="true">📖</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="brand" href="#home">EduPortal</a>
+      <p>Keep learning. Keep growing.</p>
+      <p class="copyright">&copy; <span id="year"></span> EduPortal</p>
+    </div>
+  </footer>
+</body>
+</html>
